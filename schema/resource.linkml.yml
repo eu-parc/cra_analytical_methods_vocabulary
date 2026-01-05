@@ -1,0 +1,87 @@
+id: ## add
+name: ##add-vocabulary
+description: ##add vocabulary for HBM data.
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  skos: http://www.w3.org/2004/02/skos/core#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  thesoz: http://lod.gesis.org/thesoz/
+  ##: # add own namespace
+default_prefix: ##
+
+classes:
+  NamedThing:
+    abstract: true
+    description: >-
+      An abstract model for any of the identifiable entities
+    slots:
+      - id
+      - unique_name
+      - name
+      - description
+      - remark
+    close_mappings:
+     - schema:Thing
+    class_uri: skos:Concept
+    mixins:
+      - HasTranslations
+
+  HasTranslations:
+    class_uri: thesoz:hasTranslation
+    mixin: true
+    slots:
+      - translations
+  Translation:
+    slots:
+      - property_name
+      - language
+      - translated_value
+  Data:
+    tree_root: true
+    description: >-
+      A generic top level object for collecting the resources in the vocabulary
+    slots:
+      - named_things
+
+slots:
+  id:
+    identifier: true
+    slot_uri: schema:identifier
+  unique_name:
+    slot_uri: schema:alternateName
+    exact_mappings:
+    - skos:altLabel
+    close_mappings:
+    - schema:identifier
+  name:
+    slot_uri: schema:name
+    exact_mappings:
+    - skos:altLabel
+  description:
+    slot_uri: schema:description
+    exact_mappings:
+    - skos:definition
+  label:
+    slot_uri: skos:prefLabel
+    exact_mappings:
+    - schema:alternateName
+  remark:
+    slot_uri: schema:comment
+    exact_mappings:
+    - skos:note
+  
+  translations:
+    multivalued: true
+    inlined_as_list: true
+    range: Translation
+  property_name:
+  language:
+  translated_value:
+  named_things:
+    multivalued: true
+    inlined_as_list: true
+    range: NamedThing

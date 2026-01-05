@@ -1,0 +1,89 @@
+name: Request modifications to an existing vocabulary term.
+
+description: Provide details about the vocabulary term that requires modification.
+
+title: Modify vocabulary term [X]
+
+labels: [ Modify, VocabularyTerm ]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this vocabulary term modification form!
+
+        Please provide the necessary details about the vocabulary term. Don't forget to include the term URI, and only provide info on those fields that you would want to see changed.
+  
+  - type: input
+    id: id
+    attributes:
+      label: Vocabulary term URI
+      description: Unique resource identifier for the vocabulary term.
+      placeholder: ex. peh:MA-0014ab7741xt
+    validations:
+      required: true
+
+  - type: input
+    id: unique_name
+    attributes:
+      label: Unique Name
+      description: A unique, human-readable name for the matrix.
+      placeholder: ex. example_matrix
+    validations:
+      required: false
+
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: The official name of the matrix.
+      placeholder: ex. Example Matrix
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide a brief description of the matrix.
+    validations:
+      required: false
+
+  - type: input
+    id: label
+    attributes:
+      label: Label
+      description: A concise label for the matrix.
+      placeholder: ex. Example Label
+    validations:
+      required: false
+
+  - type: textarea
+    id: remark
+    attributes:
+      label: Remark
+      description: Any additional notes or remarks regarding the matrix.
+    validations:
+      required: false
+
+
+  - type: textarea
+    id: translations
+    attributes:
+      label: Translations
+      description: |
+        Provide translations as a list in the format:
+        ```
+        - property_name: example_property
+          language: en
+          translated_value: Example Translation
+        - property_name: another_property
+          language: fr
+          translated_value: Traduction Exemple
+        ```
+      placeholder: |
+        - property_name: matrix_property
+          language: en
+          translated_value: Example Translation
+    validations:
+      required: false

@@ -1,0 +1,4 @@
+named_things:
+- id: https://example.com/first
+  name: first example
+  unique_name: FE

@@ -1,0 +1,36 @@
+name: Publish Vocabulary
+
+permissions:
+  contents: write
+
+on:
+    pull_request:
+    release:
+        types: [published]
+
+
+jobs:
+    ## PICK EITHER ONE OF THE TWO
+    #publish-vocabulary:
+    #    if: github.repository != 'eu-parc/vocabulary-template'
+    #    uses: eu-parc/voc2skosmos-workflow/.github/workflows/csv2skos.yml@main
+    #    with:
+    #        ref: ${{ github.ref }}
+    #        namespace: http://www.placeholder.com/
+    #        namespace_label: placeholder
+    #        mappings_file: rules/mappings.yarrr.yml
+    #    secrets:
+    #        token: ${{ secrets.GITHUB_TOKEN }}
+
+    publish-vocabulary:
+        if: github.repository != 'eu-parc/vocabulary-template'
+        uses: eu-parc/voc2skosmos-workflow/.github/workflows/yml2skos.yml@main
+        with:
+            ref: ${{ github.ref }}
+            namespace: http://www.placeholder.com/
+            linkml_schema: schema/resource.linkml.yml
+            data: data/data.yml
+            voc_uri: https://w3id.org/peh/resource
+            entity_name: resource #[ADD IN LINKML CLASS NAME]
+        secrets:
+            token: ${{ secrets.GITHUB_TOKEN }}
