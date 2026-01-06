@@ -1,89 +1,85 @@
 analytical_methods:
-- id: spectroscopy
+- id: https://w3id.org/crahub/ANALYTME--f2ccb2a917
   name: Spectroscopy
   parent_method: null
   unique_name: spectroscopy
-- id: mass_spec
+- id: https://w3id.org/crahub/ANALYTME--2be6e9d9de
   name: Mass Spectrometry
   parent_method: null
   unique_name: mass_spec
-- id: chromatography
+- id: https://w3id.org/crahub/ANALYTME--de9542c178
   name: Chromatography
   parent_method: null
   unique_name: chromatography
-- id: mixed
+- id: https://w3id.org/crahub/ANALYTME--1d770934d4
   name: Mixed Methods
   parent_method: null
   unique_name: mixed
-# SPECTROSCOPY METHODS
-- id: aas
-  name: Atomic Absorption Spectroscopy (AAS) 
-  parent_method: spectroscopy
+- id: https://w3id.org/crahub/ANALYTME--37f31694ce
+  name: Atomic Absorption Spectroscopy (AAS)
+  parent_method: https://w3id.org/crahub/ANALYTME--f2ccb2a917
   unique_name: aas
-- id: aes
-  name: Atomic Emission Spectroscopy (AES) 
-  parent_method: spectroscopy
+- id: https://w3id.org/crahub/ANALYTME--6d3c5993ca
+  name: Atomic Emission Spectroscopy (AES)
+  parent_method: https://w3id.org/crahub/ANALYTME--f2ccb2a917
   unique_name: aes
-- id: afs
-  name: Atomic Fluorescence Spectroscopy (AFS)  
-  parent_method: spectroscopy
+- id: https://w3id.org/crahub/ANALYTME--47e8b9940d
+  name: Atomic Fluorescence Spectroscopy (AFS)
+  parent_method: https://w3id.org/crahub/ANALYTME--f2ccb2a917
   unique_name: afs
-- id: icp
-  name: Inductively Coupled Plasma Spectroscopy (ICP) 
-  parent_method: spectroscopy
+- id: https://w3id.org/crahub/ANALYTME--7a8b4dc392
+  name: Inductively Coupled Plasma Spectroscopy (ICP)
+  parent_method: https://w3id.org/crahub/ANALYTME--f2ccb2a917
   unique_name: icp
-- id: xrf
+- id: https://w3id.org/crahub/ANALYTME--e046e80be9
   name: X-ray Fluorescence (XRF)
-  parent_method: spectroscopy
+  parent_method: https://w3id.org/crahub/ANALYTME--f2ccb2a917
   unique_name: xrf
-- id: nmr
+- id: https://w3id.org/crahub/ANALYTME--3acc04fb85
   name: Nuclear Magnetic Resonance (NMR))
-  parent_method: spectroscopy
+  parent_method: https://w3id.org/crahub/ANALYTME--f2ccb2a917
   unique_name: nmr
-- id: uvvis
+- id: https://w3id.org/crahub/ANALYTME--e3b978f1f5
   name: UV-Visile Spectroscopy (UV-Vis)
-  parent_method: spectroscopy
+  parent_method: https://w3id.org/crahub/ANALYTME--f2ccb2a917
   unique_name: uvvis
-# MASS SPECTROMETRY METHODS
-- id: icpms
+- id: https://w3id.org/crahub/ANALYTME--3be32d0ad5
   name: ICP Mass Spectrometry (ICP-MS)
-  parent_method: mass_spec
+  parent_method: https://w3id.org/crahub/ANALYTME--2be6e9d9de
   unique_name: icpms
-- id: gcms
-  name: Gas Chromatography – Mass Spectrometry (GC-MS) 
-  parent_method: mass_spec
+- id: https://w3id.org/crahub/ANALYTME--ca01794831
+  name: Gas Chromatography – Mass Spectrometry (GC-MS)
+  parent_method: https://w3id.org/crahub/ANALYTME--2be6e9d9de
   unique_name: gcms
-- id: lcms
-  name: Liquid Chromatography – Mass Spectrometry (LC-MS) 
-  parent_method: mass_spec
+- id: https://w3id.org/crahub/ANALYTME--0d2dc0ee96
+  name: Liquid Chromatography – Mass Spectrometry (LC-MS)
+  parent_method: https://w3id.org/crahub/ANALYTME--2be6e9d9de
   unique_name: lcms
-- id: icms
-  name: Ion Chromatography – Mass Spectrometry (IC-MS) 
-  parent_method: mass_spec
+- id: https://w3id.org/crahub/ANALYTME--1acf511985
+  name: Ion Chromatography – Mass Spectrometry (IC-MS)
+  parent_method: https://w3id.org/crahub/ANALYTME--2be6e9d9de
   unique_name: icms
-- id: sfc
+- id: https://w3id.org/crahub/ANALYTME--fff64cb6be
   name: Supercritical Fluid Chromatography (SFC)
-  parent_method: mass_spec
+  parent_method: https://w3id.org/crahub/ANALYTME--2be6e9d9de
   unique_name: sfc
- # CHROMATOGRAPHY METHODS 
-- id: lc
-  name: Liquid Chromatography (LC) 
-  parent_method: chromatography
+- id: https://w3id.org/crahub/ANALYTME--196accbcf3
+  name: Liquid Chromatography (LC)
+  parent_method: https://w3id.org/crahub/ANALYTME--de9542c178
   unique_name: lc
-- id: gc
-  name: Gas Chromatography (GC) 
-  parent_method: chromatography
+- id: https://w3id.org/crahub/ANALYTME--a3973867cd
+  name: Gas Chromatography (GC)
+  parent_method: https://w3id.org/crahub/ANALYTME--de9542c178
   unique_name: gc
-- id: ic
+- id: https://w3id.org/crahub/ANALYTME--f05a225e14
   name: Ion Chromatography (IC)
-  parent_method: chromatography
+  parent_method: https://w3id.org/crahub/ANALYTME--de9542c178
   unique_name: ic
-# MIXED METHODS
-- id: mixedicp
+- id: https://w3id.org/crahub/ANALYTME--82352d189b
   name: Mix-Inductively Coupled Plasma Spectroscopy (ICP)
-  parent_method: mixed
+  parent_method: https://w3id.org/crahub/ANALYTME--1d770934d4
   unique_name: mixedicp
-- id: mixothers
+- id: https://w3id.org/crahub/ANALYTME--1cae29aecd
   name: Mix-Others
-  parent_method: mixed
+  parent_method: https://w3id.org/crahub/ANALYTME--1d770934d4
   unique_name: mixothers
