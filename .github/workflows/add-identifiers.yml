@@ -2,6 +2,7 @@ name: Add identifiers
 
 permissions:
   contents: write
+  actions: write
 
 on:
     pull_request:
@@ -15,11 +16,11 @@ jobs:
         with:
             ref: ${{ github.ref }}
             data: data/data.yaml
-            target_name: #[ADD LINKML SLOT OF CONTAINER CLASS HERE]
-            # parent_key: parent_matrix: OPTIONAL
+            target_name: analytical_methods
+            parent_key: parent_method
             preflabel: unique_name
-            type_prefix: #[ADD identifier prefix]
-            namespace: https://w3id.org/peh/
+            type_prefix: ANALYTME-
+            namespace: https://w3id.org/crahub/
             artefact_name: data-with-id.yaml
             output: data-with-id.yaml
         secrets:
