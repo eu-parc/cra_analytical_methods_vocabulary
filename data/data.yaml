@@ -83,10 +83,14 @@ analytical_methods:
   unique_name: mixedicp
 - id: mixothers
   name: Mix-Others
-  parent_method: mixed
+  parent_method: https://w3id.org/crahub/ANALYTME--1d770934d4
   unique_name: mixothers
-# INDIVIDUAL METHODS
 
+# INDIVIDUAL METHODS
+- id: direct_aas
+  name: Direct AAS
+  parent_method: aas
+  unique_name: directAAS
 - id: f_aas
   name: Flame AAS
   parent_method: aas
@@ -111,10 +115,10 @@ analytical_methods:
   name: Advanced Mercury Analyzer
   parent_method: aas
   unique_name: AMA
-- id: aes
+- id: direct_aes
   name: Direct AES
   parent_method: aes
-  unique_name: AES
+  unique_name: directAES
 - id: f_aes
   name: Flame AES
   parent_method: aes
@@ -127,10 +131,10 @@ analytical_methods:
   name: Glow Discharge AES
   parent_method: aes
   unique_name: GD_AES
-- id: afs
+- id: direct_afs
   name: Direct AFS
   parent_method: afs
-  unique_name: AFS
+  unique_name: directAFS
 - id: hg_afs
   name: Hydride Generation AFS
   parent_method: afs
@@ -144,23 +148,23 @@ analytical_methods:
   parent_method: afs
   unique_name: CV_AFS
 - id: icp_aes
-  name: Atomic Emission Spectroscopy
+  name: ICP AES
   parent_method: icp
-  unique_name: ICP_AES
+  unique_name: ICP Atomic Emission Spectroscopy
 - id: icp_oes
-  name: Optical Emission Spectroscopy
+  name: ICP Optical Emission Spectroscopy
   parent_method: icp
   unique_name: ICP_OES
 - id: edxrf
-  name: Energy-Dispersive
+  name: Energy-Dispersive XRF
   parent_method: xrf
   unique_name: EDXRF
 - id: wdxrf
-  name: Wavelength-Dispersive
+  name: Wavelength-Dispersive XRF
   parent_method: xrf
   unique_name: WDXRF
 - id: txrf
-  name: Total Reflection
+  name: Total Reflection XRF
   parent_method: xrf
   unique_name: TXRF
 - id: 1h_nmr
@@ -171,18 +175,18 @@ analytical_methods:
   name: Carbon NMR
   parent_method: nmr
   unique_name: 13C_NMR
-- id: uv_vis
-  name: Single Wavelength
+- id: sw_uv_vis
+  name: Single Wavelength UV-Vis
   parent_method: uvvis
-  unique_name: UV_Vis
+  unique_name: sw_UV_Vis
 - id: uv_vis _ dad
-  name: Multi-Wavelength / DAD
+  name: Multi-Wavelength / DAD UV-Vis
   parent_method: uvvis
   unique_name: UV_Vis _ DAD
-- id: icp_ms
-  name: ICP-MS
-  parent_method: icpms
-  unique_name: ICP_MS
+#- id: icp_ms_basic
+ # name: ICP-MS
+ # parent_method: icpms
+ # unique_name: ICP_MS
 - id: icp_ms_ms
   name: ICP-MS/MS
   parent_method: icpms
@@ -195,10 +199,10 @@ analytical_methods:
   name: ICP-KED-MS
   parent_method: icpms
   unique_name: ICP_KED_MS
-- id: gc_ms
-  name: GC-MS
-  parent_method: gcms
-  unique_name: GC_MS
+#- id: gc_ms_basic 
+#  name: GC-MS
+#  parent_method: gcms
+#  unique_name: GC_MS
 - id: gc_ms_ms
   name: GC-MS/MS
   parent_method: gcms
@@ -303,10 +307,6 @@ analytical_methods:
   name: GC×GC-HRMS
   parent_method: gcms
   unique_name: GC×GC_HRMS
-- id: lc_ms
-  name: LC-MS
-  parent_method: gcms
-  unique_name: LC_MS
 - id: lc_ms_ms
   name: LC-MS/MS
   parent_method: lcms
@@ -351,10 +351,10 @@ analytical_methods:
   name: UPLC-HRMS/MS
   parent_method: lcms
   unique_name: UPLC_HRMS_MS
-- id: ic_ms
-  name: IC-MS
-  parent_method: icms
-  unique_name: IC_MS
+#- id: ic_ms
+ # name: IC-MS
+ # parent_method: icms
+ # unique_name: IC_MS
 - id: ic_ms_ms
   name: IC-MS/MS
   parent_method: icms
@@ -383,10 +383,10 @@ analytical_methods:
   name: IC-ESI-HRMS/MS
   parent_method: icms
   unique_name: IC_ESI_HRMS_MS
-- id: sfc_ms
-  name: SFC-MS
-  parent_method: sfc
-  unique_name: SFC_MS
+#- id: sfc_ms
+ # name: SFC-MS
+ # parent_method: sfc
+ # unique_name: SFC_MS
 - id: sfc_ms_ms
   name: SFC-MS/MS
   parent_method: sfc
@@ -491,5 +491,3 @@ analytical_methods:
   name: LC-NMR
   parent_method: mixothers
   unique_name: LC_NMR
-  parent_method: https://w3id.org/crahub/ANALYTME--1d770934d4
-  unique_name: mixothers
