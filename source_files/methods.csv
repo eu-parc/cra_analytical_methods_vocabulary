@@ -1,0 +1,103 @@
+analytical method group;analytical method subgroup;parent_method;name alter;name;id
+Spectroscopy ;Atomic Absorption Spectroscopy (AAS) ;aas;AAS;;AAS
+Spectroscopy ;Atomic Absorption Spectroscopy (AAS) ;aas;F-AAS;Flame AAS ;F_AAS
+Spectroscopy ;Atomic Absorption Spectroscopy (AAS) ;aas;GF-AAS;Graphite Furnace AAS ;GF_AAS
+Spectroscopy ;Atomic Absorption Spectroscopy (AAS) ;aas;CV-AAS;Cold Vapour AAS ;CV_AAS
+Spectroscopy ;Atomic Absorption Spectroscopy (AAS) ;aas;TDA-AAS;Thermal Decomposition AAS ;TDA_AAS
+Spectroscopy ;Atomic Absorption Spectroscopy (AAS) ;aas;DMA;Direct Mercury Analyzer ;DMA
+Spectroscopy ;Atomic Absorption Spectroscopy (AAS) ;aas;AMA;Advanced Mercury Analyzer ;AMA
+Spectroscopy ;Atomic Emission Spectroscopy (AES) ;aes;AES;Direct AES ;AES
+Spectroscopy ;Atomic Emission Spectroscopy (AES) ;aes;F-AES;Flame AES ;F_AES
+Spectroscopy ;Atomic Emission Spectroscopy (AES) ;aes;MPAES;Plasma AES ;MPAES
+Spectroscopy ;Atomic Emission Spectroscopy (AES) ;aes;GD-AES;Glow Discharge AES ;GD_AES
+Spectroscopy ;Atomic Fluorescence Spectroscopy (AFS) ;afs;AFS;Direct AFS ;AFS
+Spectroscopy ;Atomic Fluorescence Spectroscopy (AFS) ;afs;HG-AFS;Hydride Generation AFS ;HG_AFS
+Spectroscopy ;Atomic Fluorescence Spectroscopy (AFS) ;afs;FI-AFS;Flow Injection AFS ;FI_AFS
+Spectroscopy ;Atomic Fluorescence Spectroscopy (AFS) ;afs;CV-AFS;Cold Vapor AFS ;CV_AFS
+Spectroscopy ;Inductively Coupled Plasma Spectroscopy (ICP);icp;ICP-AES;Atomic Emission Spectroscopy ;ICP_AES
+Spectroscopy ;Inductively Coupled Plasma Spectroscopy (ICP);icp;ICP-OES ;Optical Emission Spectroscopy ;ICP_OES 
+Spectroscopy ;X-ray Fluorescence (XRF);xrf;EDXRF;Energy-Dispersive ;EDXRF
+Spectroscopy ;X-ray Fluorescence (XRF);xrf;WDXRF;Wavelength-Dispersive ;WDXRF
+Spectroscopy ;X-ray Fluorescence (XRF);xrf;TXRF;Total Reflection ;TXRF
+Spectroscopy ;Nuclear Magnetic Resonance (NMR);nmr;1H-NMR;Proton NMR;1H_NMR
+Spectroscopy ;Nuclear Magnetic Resonance (NMR);nmr;13C-NMR;Carbon NMR;13C_NMR
+Spectroscopy ;UV-Visile Spectroscopy (UV-Vis);uvvis;UV-Vis;Single Wavelength;UV_Vis
+Spectroscopy ;UV-Visile Spectroscopy (UV-Vis);uvvis;UV-Vis / DAD;Multi-Wavelength / DAD;UV_Vis _ DAD
+Mass Spectrometry ;ICP Mass Spectrometry (ICP-MS);icpms;ICP-MS;;ICP_MS
+Mass Spectrometry ;ICP Mass Spectrometry (ICP-MS);icpms;ICP-MS/MS;;ICP_MS_MS
+Mass Spectrometry ;ICP Mass Spectrometry (ICP-MS);icpms;ICP-DRC-MS;;ICP_DRC_MS
+Mass Spectrometry ;ICP Mass Spectrometry (ICP-MS);icpms;ICP-KED-MS;;ICP_KED_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-MS;;GC_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-MS/MS;;GC_MS_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-HRMS;;GC_HRMS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-HRMS/MS;;GC_HRMS_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-EI-MS;;GC_EI_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-EI-MS/MS;;GC_EI_MS_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-EI-HRMS;;GC_EI_HRMS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-EI-HRMS/MS;;GC_EI_HRMS_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-NCI-MS;;GC_NCI_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-NCI-MS/MS;;GC_NCI_MS_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-NCI-HRMS;;GC_NCI_HRMS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-NCI-HRMS/MS;;GC_NCI_HRMS_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-CI-MS;;GC_CI_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-CI-MS/MS;;GC_CI_MS_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-CI-HRMS;;GC_CI_HRMS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-CI-HRMS/MS;;GC_CI_HRMS_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-APPI-MS;;GC_APPI_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-APPI-MS/MS;;GC_APPI_MS_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-APPI-HRMS;;GC_APPI_HRMS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-APPI-HRMS/MS;;GC_APPI_HRMS_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-APCI-MS;;GC_APCI_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-APCI-MS/MS;;GC_APCI_MS_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-APCI-HRMS;;GC_APCI_HRMS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC-APCI-HRMS/MS;;GC_APCI_HRMS_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC×GC-MS;;GC×GC_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC×GC-MS/MS;;GC×GC_MS_MS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;GC×GC-HRMS;;GC×GC_HRMS
+Mass Spectrometry ;Gas Chromatography – Mass Spectrometry (GC-MS) ;gcms;LC-MS;;LC_MS
+Mass Spectrometry ;Liquid Chromatography – Mass Spectrometry (LC-MS) ;lcms;LC-MS/MS;;LC_MS_MS
+Mass Spectrometry ;Liquid Chromatography – Mass Spectrometry (LC-MS) ;lcms;LC-HRMS;;LC_HRMS
+Mass Spectrometry ;Liquid Chromatography – Mass Spectrometry (LC-MS) ;lcms;LC-HRMS/MS;;LC_HRMS_MS
+Mass Spectrometry ;Liquid Chromatography – Mass Spectrometry (LC-MS) ;lcms;HPLC-MS;;HPLC_MS
+Mass Spectrometry ;Liquid Chromatography – Mass Spectrometry (LC-MS) ;lcms;HPLC-MS/MS;;HPLC_MS_MS
+Mass Spectrometry ;Liquid Chromatography – Mass Spectrometry (LC-MS) ;lcms;HPLC-HRMS;;HPLC_HRMS
+Mass Spectrometry ;Liquid Chromatography – Mass Spectrometry (LC-MS) ;lcms;HPLC-HRMS/MS;;HPLC_HRMS_MS
+Mass Spectrometry ;Liquid Chromatography – Mass Spectrometry (LC-MS) ;lcms;UPLC-MS;;UPLC_MS
+Mass Spectrometry ;Liquid Chromatography – Mass Spectrometry (LC-MS) ;lcms;UPLC-MS/MS;;UPLC_MS_MS
+Mass Spectrometry ;Liquid Chromatography – Mass Spectrometry (LC-MS) ;lcms;UPLC-HRMS;;UPLC_HRMS
+Mass Spectrometry ;Liquid Chromatography – Mass Spectrometry (LC-MS) ;lcms;UPLC-HRMS/MS;;UPLC_HRMS_MS
+Mass Spectrometry ;Ion Chromatography – Mass Spectrometry (IC-MS) ;icms;IC-MS;;IC_MS
+Mass Spectrometry ;Ion Chromatography – Mass Spectrometry (IC-MS) ;icms;IC-MS/MS;;IC_MS_MS
+Mass Spectrometry ;Ion Chromatography – Mass Spectrometry (IC-MS) ;icms;IC-HRMS;;IC_HRMS
+Mass Spectrometry ;Ion Chromatography – Mass Spectrometry (IC-MS) ;icms;IC-HRMS/MS;;IC_HRMS_MS
+Mass Spectrometry ;Ion Chromatography – Mass Spectrometry (IC-MS) ;icms;IC-ESI-MS;;IC_ESI_MS
+Mass Spectrometry ;Ion Chromatography – Mass Spectrometry (IC-MS) ;icms;IC-ESI-MS/MS;;IC_ESI_MS_MS
+Mass Spectrometry ;Ion Chromatography – Mass Spectrometry (IC-MS) ;icms;IC-ESI-HRMS;;IC_ESI_HRMS
+Mass Spectrometry ;Ion Chromatography – Mass Spectrometry (IC-MS) ;icms;IC-ESI-HRMS/MS;;IC_ESI_HRMS_MS
+Mass Spectrometry ;Supercritical Fluid Chromatography (SFC);sfc;SFC-MS;;SFC_MS
+Mass Spectrometry ;Supercritical Fluid Chromatography (SFC);sfc;SFC-MS/MS;;SFC_MS_MS
+Mass Spectrometry ;Supercritical Fluid Chromatography (SFC);sfc;SFC-HRMS;;SFC_HRMS
+Mass Spectrometry ;Supercritical Fluid Chromatography (SFC);sfc;SFC-HRMS/MS;;SFC_HRMS_MS
+Chromatography ;Liquid Chromatography (LC) ;lc;LC-DAD;;LC_DAD
+Chromatography ;Liquid Chromatography (LC) ;lc;LC-FLD;;LC_FLD
+Chromatography ;Liquid Chromatography (LC) ;lc;LC-UV;;LC_UV
+Chromatography ;Liquid Chromatography (LC) ;lc;HPLC;;HPLC
+Chromatography ;Liquid Chromatography (LC) ;lc;HPLC-DAD;;HPLC_DAD
+Chromatography ;Liquid Chromatography (LC) ;lc;HPLC-FLD;;HPLC_FLD
+Chromatography ;Liquid Chromatography (LC) ;lc;HPLC-UV;;HPLC_UV
+Chromatography ;Liquid Chromatography (LC) ;lc;UPLC;;UPLC
+Chromatography ;Liquid Chromatography (LC) ;lc;UPLC-DAD;;UPLC_DAD
+Chromatography ;Liquid Chromatography (LC) ;lc;UPLC-FLD;;UPLC_FLD
+Chromatography ;Liquid Chromatography (LC) ;lc;UPLC-UV;;UPLC_UV
+Chromatography ;Gas Chromatography (GC) ;gc;GC-ECD;;GC_ECD
+Chromatography ;Gas Chromatography (GC) ;gc;GC-FID;;GC_FID
+Chromatography ;Gas Chromatography (GC) ;gc;GC-PID;;GC_PID
+Chromatography ;Ion Chromatography (IC);ic;IC-UV;;IC_UV
+Chromatography ;Ion Chromatography (IC);ic;IC-DAD;;IC_DAD
+Chromatography ;Ion Chromatography (IC);ic;IC-FLD;;IC_FLD
+Mixed Methods;Mix-Inductively Coupled Plasma Spectroscopy (ICP);mixedicp;LC-ICP-MS;;LC_ICP_MS
+Mixed Methods;Mix-Inductively Coupled Plasma Spectroscopy (ICP);mixedicp;LC-ICP-MS/MS;;LC_ICP_MS_MS
+Mixed Methods;Mix-Inductively Coupled Plasma Spectroscopy (ICP);mixedicp;GC-ICP-MS;;GC_ICP_MS
+Mixed Methods;Mix-Inductively Coupled Plasma Spectroscopy (ICP);mixedicp;IC-ICP-MS;;IC_ICP_MS
+Mixed Methods;Mix-Others;mixothers;LC-IR;;LC_IR
+Mixed Methods;Mix-Others;mixothers;LC-NMR;;LC_NMR

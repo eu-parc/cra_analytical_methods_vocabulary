@@ -1,93 +1,3 @@
-analytical_methods:
-- id: spectroscopy
-  name: Spectroscopy
-  parent_method: null
-  unique_name: spectroscopy
-- id: mass_spec
-  name: Mass Spectrometry
-  parent_method: null
-  unique_name: mass_spec
-- id: chromatography
-  name: Chromatography
-  parent_method: null
-  unique_name: chromatography
-- id: mixed
-  name: Mixed Methods
-  parent_method: null
-  unique_name: mixed
-# SPECTROSCOPY METHODS
-- id: aas
-  name: Atomic Absorption Spectroscopy (AAS) 
-  parent_method: spectroscopy
-  unique_name: aas
-- id: aes
-  name: Atomic Emission Spectroscopy (AES) 
-  parent_method: spectroscopy
-  unique_name: aes
-- id: afs
-  name: Atomic Fluorescence Spectroscopy (AFS)  
-  parent_method: spectroscopy
-  unique_name: afs
-- id: icp
-  name: Inductively Coupled Plasma Spectroscopy (ICP) 
-  parent_method: spectroscopy
-  unique_name: icp
-- id: xrf
-  name: X-ray Fluorescence (XRF)
-  parent_method: spectroscopy
-  unique_name: xrf
-- id: nmr
-  name: Nuclear Magnetic Resonance (NMR))
-  parent_method: spectroscopy
-  unique_name: nmr
-- id: uvvis
-  name: UV-Visile Spectroscopy (UV-Vis)
-  parent_method: spectroscopy
-  unique_name: uvvis
-# MASS SPECTROMETRY METHODS
-- id: icpms
-  name: ICP Mass Spectrometry (ICP-MS)
-  parent_method: mass_spec
-  unique_name: icpms
-- id: gcms
-  name: Gas Chromatography – Mass Spectrometry (GC-MS) 
-  parent_method: mass_spec
-  unique_name: gcms
-- id: lcms
-  name: Liquid Chromatography – Mass Spectrometry (LC-MS) 
-  parent_method: mass_spec
-  unique_name: lcms
-- id: icms
-  name: Ion Chromatography – Mass Spectrometry (IC-MS) 
-  parent_method: mass_spec
-  unique_name: icms
-- id: sfc
-  name: Supercritical Fluid Chromatography (SFC)
-  parent_method: mass_spec
-  unique_name: sfc
- # CHROMATOGRAPHY METHODS 
-- id: lc
-  name: Liquid Chromatography (LC) 
-  parent_method: chromatography
-  unique_name: lc
-- id: gc
-  name: Gas Chromatography (GC) 
-  parent_method: chromatography
-  unique_name: gc
-- id: ic
-  name: Ion Chromatography (IC)
-  parent_method: chromatography
-  unique_name: ic
-# MIXED METHODS
-- id: mixedicp
-  name: Mix-Inductively Coupled Plasma Spectroscopy (ICP)
-  parent_method: mixed
-  unique_name: mixedicp
-- id: mixothers
-  name: Mix-Others
-  parent_method: mixed
-  unique_name: mixothers
-# INDIVIDUAL METHODS
 - id: aas
   name: AAS
   parent_method: aas
@@ -296,15 +206,15 @@ analytical_methods:
   name: GC-APCI-HRMS/MS
   parent_method: gcms
   unique_name: GC_APCI_HRMS_MS
-- id: gc_gc_ms
+- id: gc×gc_ms
   name: GC×GC-MS
   parent_method: gcms
   unique_name: GC×GC_MS
-- id: gc_gc_ms_ms
+- id: gc×gc_ms_ms
   name: GC×GC-MS/MS
   parent_method: gcms
   unique_name: GC×GC_MS_MS
-- id: gc_gc_hrms
+- id: gc×gc_hrms
   name: GC×GC-HRMS
   parent_method: gcms
   unique_name: GC×GC_HRMS
