@@ -15,479 +15,459 @@ analytical_methods:
   name: Mixed Methods
   parent_method: null
   unique_name: mixed
-
-# SUBMETHODS
-- id: aas
+- id: https://w3id.org/crahub/ANALYTME--37f31694ce
   name: Atomic Absorption Spectroscopy (AAS)
   parent_method: https://w3id.org/crahub/ANALYTME--f2ccb2a917
   unique_name: aas
-- id: aes
+- id: https://w3id.org/crahub/ANALYTME--6d3c5993ca
   name: Atomic Emission Spectroscopy (AES)
   parent_method: https://w3id.org/crahub/ANALYTME--f2ccb2a917
   unique_name: aes
-- id: afs
+- id: https://w3id.org/crahub/ANALYTME--47e8b9940d
   name: Atomic Fluorescence Spectroscopy (AFS)
   parent_method: https://w3id.org/crahub/ANALYTME--f2ccb2a917
   unique_name: afs
-- id: icp
+- id: https://w3id.org/crahub/ANALYTME--7a8b4dc392
   name: Inductively Coupled Plasma Spectroscopy (ICP)
   parent_method: https://w3id.org/crahub/ANALYTME--f2ccb2a917
   unique_name: icp
-- id: xrf
+- id: https://w3id.org/crahub/ANALYTME--e046e80be9
   name: X-ray Fluorescence (XRF)
   parent_method: https://w3id.org/crahub/ANALYTME--f2ccb2a917
   unique_name: xrf
-- id: nmr
+- id: https://w3id.org/crahub/ANALYTME--3acc04fb85
   name: Nuclear Magnetic Resonance (NMR))
   parent_method: https://w3id.org/crahub/ANALYTME--f2ccb2a917
   unique_name: nmr
-- id: uvvis
+- id: https://w3id.org/crahub/ANALYTME--e3b978f1f5
   name: UV-Visile Spectroscopy (UV-Vis)
   parent_method: https://w3id.org/crahub/ANALYTME--f2ccb2a917
   unique_name: uvvis
-- id: icpms
+- id: https://w3id.org/crahub/ANALYTME--3be32d0ad5
   name: ICP Mass Spectrometry (ICP-MS)
   parent_method: https://w3id.org/crahub/ANALYTME--2be6e9d9de
   unique_name: icpms
-- id: gcms
+- id: https://w3id.org/crahub/ANALYTME--ca01794831
   name: Gas Chromatography – Mass Spectrometry (GC-MS)
   parent_method: https://w3id.org/crahub/ANALYTME--2be6e9d9de
   unique_name: gcms
-- id: lcms
+- id: https://w3id.org/crahub/ANALYTME--0d2dc0ee96
   name: Liquid Chromatography – Mass Spectrometry (LC-MS)
   parent_method: https://w3id.org/crahub/ANALYTME--2be6e9d9de
   unique_name: lcms
-- id: icms
+- id: https://w3id.org/crahub/ANALYTME--1acf511985
   name: Ion Chromatography – Mass Spectrometry (IC-MS)
   parent_method: https://w3id.org/crahub/ANALYTME--2be6e9d9de
   unique_name: icms
-- id: sfc
+- id: https://w3id.org/crahub/ANALYTME--fff64cb6be
   name: Supercritical Fluid Chromatography (SFC)
   parent_method: https://w3id.org/crahub/ANALYTME--2be6e9d9de
   unique_name: sfc
-- id: lc
+- id: https://w3id.org/crahub/ANALYTME--196accbcf3
   name: Liquid Chromatography (LC)
   parent_method: https://w3id.org/crahub/ANALYTME--de9542c178
   unique_name: lc
-- id: gc
+- id: https://w3id.org/crahub/ANALYTME--a3973867cd
   name: Gas Chromatography (GC)
   parent_method: https://w3id.org/crahub/ANALYTME--de9542c178
   unique_name: gc
-- id: ic
+- id: https://w3id.org/crahub/ANALYTME--f05a225e14
   name: Ion Chromatography (IC)
   parent_method: https://w3id.org/crahub/ANALYTME--de9542c178
   unique_name: ic
-- id: mixedicp
+- id: https://w3id.org/crahub/ANALYTME--82352d189b
   name: Mix-Inductively Coupled Plasma Spectroscopy (ICP)
   parent_method: https://w3id.org/crahub/ANALYTME--1d770934d4
   unique_name: mixedicp
-- id: mixothers
+- id: https://w3id.org/crahub/ANALYTME--1cae29aecd
   name: Mix-Others
   parent_method: https://w3id.org/crahub/ANALYTME--1d770934d4
   unique_name: mixothers
-
-# INDIVIDUAL METHODS
-- id: direct_aas
+- id: https://w3id.org/crahub/ANALYTME--171a7e93db
   name: Direct AAS
-  parent_method: aas
+  parent_method: https://w3id.org/crahub/ANALYTME--37f31694ce
   unique_name: directAAS
-- id: f_aas
+- id: https://w3id.org/crahub/ANALYTME--1acb6c4685
   name: Flame AAS
-  parent_method: aas
+  parent_method: https://w3id.org/crahub/ANALYTME--37f31694ce
   unique_name: F_AAS
-- id: gf_aas
+- id: https://w3id.org/crahub/ANALYTME--60ab875af9
   name: Graphite Furnace AAS
-  parent_method: aas
+  parent_method: https://w3id.org/crahub/ANALYTME--37f31694ce
   unique_name: GF_AAS
-- id: cv_aas
+- id: https://w3id.org/crahub/ANALYTME--97d27a2c9b
   name: Cold Vapour AAS
-  parent_method: aas
+  parent_method: https://w3id.org/crahub/ANALYTME--37f31694ce
   unique_name: CV_AAS
-- id: tda_aas
+- id: https://w3id.org/crahub/ANALYTME--357d4d785b
   name: Thermal Decomposition AAS
-  parent_method: aas
+  parent_method: https://w3id.org/crahub/ANALYTME--37f31694ce
   unique_name: TDA_AAS
-- id: dma
+- id: https://w3id.org/crahub/ANALYTME--33fd5f6391
   name: Direct Mercury Analyzer
-  parent_method: aas
+  parent_method: https://w3id.org/crahub/ANALYTME--37f31694ce
   unique_name: DMA
-- id: ama
+- id: https://w3id.org/crahub/ANALYTME--1b91b58234
   name: Advanced Mercury Analyzer
-  parent_method: aas
+  parent_method: https://w3id.org/crahub/ANALYTME--37f31694ce
   unique_name: AMA
-- id: direct_aes
+- id: https://w3id.org/crahub/ANALYTME--72b72e0d2c
   name: Direct AES
-  parent_method: aes
+  parent_method: https://w3id.org/crahub/ANALYTME--6d3c5993ca
   unique_name: directAES
-- id: f_aes
+- id: https://w3id.org/crahub/ANALYTME--762f9fd063
   name: Flame AES
-  parent_method: aes
+  parent_method: https://w3id.org/crahub/ANALYTME--6d3c5993ca
   unique_name: F_AES
-- id: mpaes
+- id: https://w3id.org/crahub/ANALYTME--66034eead9
   name: Plasma AES
-  parent_method: aes
+  parent_method: https://w3id.org/crahub/ANALYTME--6d3c5993ca
   unique_name: MPAES
-- id: gd_aes
+- id: https://w3id.org/crahub/ANALYTME--c17dc864a1
   name: Glow Discharge AES
-  parent_method: aes
+  parent_method: https://w3id.org/crahub/ANALYTME--6d3c5993ca
   unique_name: GD_AES
-- id: direct_afs
+- id: https://w3id.org/crahub/ANALYTME--27f72b5612
   name: Direct AFS
-  parent_method: afs
+  parent_method: https://w3id.org/crahub/ANALYTME--47e8b9940d
   unique_name: directAFS
-- id: hg_afs
+- id: https://w3id.org/crahub/ANALYTME--e3c7f375c8
   name: Hydride Generation AFS
-  parent_method: afs
+  parent_method: https://w3id.org/crahub/ANALYTME--47e8b9940d
   unique_name: HG_AFS
-- id: fi_afs
+- id: https://w3id.org/crahub/ANALYTME--40860981aa
   name: Flow Injection AFS
-  parent_method: afs
+  parent_method: https://w3id.org/crahub/ANALYTME--47e8b9940d
   unique_name: FI_AFS
-- id: cv_afs
+- id: https://w3id.org/crahub/ANALYTME--217839790e
   name: Cold Vapor AFS
-  parent_method: afs
+  parent_method: https://w3id.org/crahub/ANALYTME--47e8b9940d
   unique_name: CV_AFS
-- id: icp_aes
+- id: https://w3id.org/crahub/ANALYTME--182931a27d
   name: ICP AES
-  parent_method: icp
+  parent_method: https://w3id.org/crahub/ANALYTME--7a8b4dc392
   unique_name: ICP Atomic Emission Spectroscopy
-- id: icp_oes
+- id: https://w3id.org/crahub/ANALYTME--c1448951e6
   name: ICP Optical Emission Spectroscopy
-  parent_method: icp
+  parent_method: https://w3id.org/crahub/ANALYTME--7a8b4dc392
   unique_name: ICP_OES
-- id: edxrf
+- id: https://w3id.org/crahub/ANALYTME--971c3af6a1
   name: Energy-Dispersive XRF
-  parent_method: xrf
+  parent_method: https://w3id.org/crahub/ANALYTME--e046e80be9
   unique_name: EDXRF
-- id: wdxrf
+- id: https://w3id.org/crahub/ANALYTME--8157efed42
   name: Wavelength-Dispersive XRF
-  parent_method: xrf
+  parent_method: https://w3id.org/crahub/ANALYTME--e046e80be9
   unique_name: WDXRF
-- id: txrf
+- id: https://w3id.org/crahub/ANALYTME--188864afeb
   name: Total Reflection XRF
-  parent_method: xrf
+  parent_method: https://w3id.org/crahub/ANALYTME--e046e80be9
   unique_name: TXRF
-- id: 1h_nmr
+- id: https://w3id.org/crahub/ANALYTME--f1a63f0e5c
   name: Proton NMR
-  parent_method: nmr
+  parent_method: https://w3id.org/crahub/ANALYTME--3acc04fb85
   unique_name: 1H_NMR
-- id: 13c_nmr
+- id: https://w3id.org/crahub/ANALYTME--f30beb63a7
   name: Carbon NMR
-  parent_method: nmr
+  parent_method: https://w3id.org/crahub/ANALYTME--3acc04fb85
   unique_name: 13C_NMR
-- id: sw_uv_vis
+- id: https://w3id.org/crahub/ANALYTME--bf7d2f583f
   name: Single Wavelength UV-Vis
-  parent_method: uvvis
+  parent_method: https://w3id.org/crahub/ANALYTME--e3b978f1f5
   unique_name: sw_UV_Vis
-- id: uv_vis _ dad
+- id: https://w3id.org/crahub/ANALYTME--4c0d9dc3ec
   name: Multi-Wavelength / DAD UV-Vis
-  parent_method: uvvis
+  parent_method: https://w3id.org/crahub/ANALYTME--e3b978f1f5
   unique_name: UV_Vis _ DAD
-#- id: icp_ms_basic
- # name: ICP-MS
- # parent_method: icpms
- # unique_name: ICP_MS
-- id: icp_ms_ms
+- id: https://w3id.org/crahub/ANALYTME--2b02717cee
   name: ICP-MS/MS
-  parent_method: icpms
+  parent_method: https://w3id.org/crahub/ANALYTME--3be32d0ad5
   unique_name: ICP_MS_MS
-- id: icp_drc_ms
+- id: https://w3id.org/crahub/ANALYTME--eb654dd3af
   name: ICP-DRC-MS
-  parent_method: icpms
+  parent_method: https://w3id.org/crahub/ANALYTME--3be32d0ad5
   unique_name: ICP_DRC_MS
-- id: icp_ked_ms
+- id: https://w3id.org/crahub/ANALYTME--0cc0607959
   name: ICP-KED-MS
-  parent_method: icpms
+  parent_method: https://w3id.org/crahub/ANALYTME--3be32d0ad5
   unique_name: ICP_KED_MS
-#- id: gc_ms_basic 
-#  name: GC-MS
-#  parent_method: gcms
-#  unique_name: GC_MS
-- id: gc_ms_ms
+- id: https://w3id.org/crahub/ANALYTME--66131e3d72
   name: GC-MS/MS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_MS_MS
-- id: gc_hrms
+- id: https://w3id.org/crahub/ANALYTME--316e1c000d
   name: GC-HRMS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_HRMS
-- id: gc_hrms_ms
+- id: https://w3id.org/crahub/ANALYTME--19cdfff091
   name: GC-HRMS/MS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_HRMS_MS
-- id: gc_ei_ms
+- id: https://w3id.org/crahub/ANALYTME--098da3f645
   name: GC-EI-MS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_EI_MS
-- id: gc_ei_ms_ms
+- id: https://w3id.org/crahub/ANALYTME--c09ca2928e
   name: GC-EI-MS/MS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_EI_MS_MS
-- id: gc_ei_hrms
+- id: https://w3id.org/crahub/ANALYTME--0a0c551927
   name: GC-EI-HRMS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_EI_HRMS
-- id: gc_ei_hrms_ms
+- id: https://w3id.org/crahub/ANALYTME--0159924bd6
   name: GC-EI-HRMS/MS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_EI_HRMS_MS
-- id: gc_nci_ms
+- id: https://w3id.org/crahub/ANALYTME--26fcd65a77
   name: GC-NCI-MS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_NCI_MS
-- id: gc_nci_ms_ms
+- id: https://w3id.org/crahub/ANALYTME--2ccec75451
   name: GC-NCI-MS/MS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_NCI_MS_MS
-- id: gc_nci_hrms
+- id: https://w3id.org/crahub/ANALYTME--a56e17271c
   name: GC-NCI-HRMS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_NCI_HRMS
-- id: gc_nci_hrms_ms
+- id: https://w3id.org/crahub/ANALYTME--16110d21e6
   name: GC-NCI-HRMS/MS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_NCI_HRMS_MS
-- id: gc_ci_ms
+- id: https://w3id.org/crahub/ANALYTME--2e2640b1fd
   name: GC-CI-MS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_CI_MS
-- id: gc_ci_ms_ms
+- id: https://w3id.org/crahub/ANALYTME--3870fb3dfd
   name: GC-CI-MS/MS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_CI_MS_MS
-- id: gc_ci_hrms
+- id: https://w3id.org/crahub/ANALYTME--f559d4f812
   name: GC-CI-HRMS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_CI_HRMS
-- id: gc_ci_hrms_ms
+- id: https://w3id.org/crahub/ANALYTME--4832c84362
   name: GC-CI-HRMS/MS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_CI_HRMS_MS
-- id: gc_appi_ms
+- id: https://w3id.org/crahub/ANALYTME--68208f425a
   name: GC-APPI-MS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_APPI_MS
-- id: gc_appi_ms_ms
+- id: https://w3id.org/crahub/ANALYTME--2315843b8e
   name: GC-APPI-MS/MS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_APPI_MS_MS
-- id: gc_appi_hrms
+- id: https://w3id.org/crahub/ANALYTME--c8cb441743
   name: GC-APPI-HRMS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_APPI_HRMS
-- id: gc_appi_hrms_ms
+- id: https://w3id.org/crahub/ANALYTME--80c01ab351
   name: GC-APPI-HRMS/MS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_APPI_HRMS_MS
-- id: gc_apci_ms
+- id: https://w3id.org/crahub/ANALYTME--fba2a24651
   name: GC-APCI-MS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_APCI_MS
-- id: gc_apci_ms_ms
+- id: https://w3id.org/crahub/ANALYTME--642a0bdea9
   name: GC-APCI-MS/MS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_APCI_MS_MS
-- id: gc_apci_hrms
+- id: https://w3id.org/crahub/ANALYTME--63af9598f4
   name: GC-APCI-HRMS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_APCI_HRMS
-- id: gc_apci_hrms_ms
+- id: https://w3id.org/crahub/ANALYTME--a7008dbb80
   name: GC-APCI-HRMS/MS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC_APCI_HRMS_MS
-- id: gc_gc_ms
+- id: https://w3id.org/crahub/ANALYTME--63cdb7e387
   name: GC×GC-MS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC×GC_MS
-- id: gc_gc_ms_ms
+- id: https://w3id.org/crahub/ANALYTME--e7954a5367
   name: GC×GC-MS/MS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC×GC_MS_MS
-- id: gc_gc_hrms
+- id: https://w3id.org/crahub/ANALYTME--fed6744c9a
   name: GC×GC-HRMS
-  parent_method: gcms
+  parent_method: https://w3id.org/crahub/ANALYTME--ca01794831
   unique_name: GC×GC_HRMS
-- id: lc_ms_ms
+- id: https://w3id.org/crahub/ANALYTME--44491d938f
   name: LC-MS/MS
-  parent_method: lcms
+  parent_method: https://w3id.org/crahub/ANALYTME--0d2dc0ee96
   unique_name: LC_MS_MS
-- id: lc_hrms
+- id: https://w3id.org/crahub/ANALYTME--698c41af12
   name: LC-HRMS
-  parent_method: lcms
+  parent_method: https://w3id.org/crahub/ANALYTME--0d2dc0ee96
   unique_name: LC_HRMS
-- id: lc_hrms_ms
+- id: https://w3id.org/crahub/ANALYTME--0d8bb76bc1
   name: LC-HRMS/MS
-  parent_method: lcms
+  parent_method: https://w3id.org/crahub/ANALYTME--0d2dc0ee96
   unique_name: LC_HRMS_MS
-- id: hplc_ms
+- id: https://w3id.org/crahub/ANALYTME--cfb3ceaefe
   name: HPLC-MS
-  parent_method: lcms
+  parent_method: https://w3id.org/crahub/ANALYTME--0d2dc0ee96
   unique_name: HPLC_MS
-- id: hplc_ms_ms
+- id: https://w3id.org/crahub/ANALYTME--dc902e58a0
   name: HPLC-MS/MS
-  parent_method: lcms
+  parent_method: https://w3id.org/crahub/ANALYTME--0d2dc0ee96
   unique_name: HPLC_MS_MS
-- id: hplc_hrms
+- id: https://w3id.org/crahub/ANALYTME--fe4843227f
   name: HPLC-HRMS
-  parent_method: lcms
+  parent_method: https://w3id.org/crahub/ANALYTME--0d2dc0ee96
   unique_name: HPLC_HRMS
-- id: hplc_hrms_ms
+- id: https://w3id.org/crahub/ANALYTME--ae3cdcc0f8
   name: HPLC-HRMS/MS
-  parent_method: lcms
+  parent_method: https://w3id.org/crahub/ANALYTME--0d2dc0ee96
   unique_name: HPLC_HRMS_MS
-- id: uplc_ms
+- id: https://w3id.org/crahub/ANALYTME--9fe014c08c
   name: UPLC-MS
-  parent_method: lcms
+  parent_method: https://w3id.org/crahub/ANALYTME--0d2dc0ee96
   unique_name: UPLC_MS
-- id: uplc_ms_ms
+- id: https://w3id.org/crahub/ANALYTME--dfbd427f3a
   name: UPLC-MS/MS
-  parent_method: lcms
+  parent_method: https://w3id.org/crahub/ANALYTME--0d2dc0ee96
   unique_name: UPLC_MS_MS
-- id: uplc_hrms
+- id: https://w3id.org/crahub/ANALYTME--b6c2d07cf2
   name: UPLC-HRMS
-  parent_method: lcms
+  parent_method: https://w3id.org/crahub/ANALYTME--0d2dc0ee96
   unique_name: UPLC_HRMS
-- id: uplc_hrms_ms
+- id: https://w3id.org/crahub/ANALYTME--4d727616a7
   name: UPLC-HRMS/MS
-  parent_method: lcms
+  parent_method: https://w3id.org/crahub/ANALYTME--0d2dc0ee96
   unique_name: UPLC_HRMS_MS
-#- id: ic_ms
- # name: IC-MS
- # parent_method: icms
- # unique_name: IC_MS
-- id: ic_ms_ms
+- id: https://w3id.org/crahub/ANALYTME--2cee207d9c
   name: IC-MS/MS
-  parent_method: icms
+  parent_method: https://w3id.org/crahub/ANALYTME--1acf511985
   unique_name: IC_MS_MS
-- id: ic_hrms
+- id: https://w3id.org/crahub/ANALYTME--663ea75e37
   name: IC-HRMS
-  parent_method: icms
+  parent_method: https://w3id.org/crahub/ANALYTME--1acf511985
   unique_name: IC_HRMS
-- id: ic_hrms_ms
+- id: https://w3id.org/crahub/ANALYTME--00cb796fd5
   name: IC-HRMS/MS
-  parent_method: icms
+  parent_method: https://w3id.org/crahub/ANALYTME--1acf511985
   unique_name: IC_HRMS_MS
-- id: ic_esi_ms
+- id: https://w3id.org/crahub/ANALYTME--db992f361b
   name: IC-ESI-MS
-  parent_method: icms
+  parent_method: https://w3id.org/crahub/ANALYTME--1acf511985
   unique_name: IC_ESI_MS
-- id: ic_esi_ms_ms
+- id: https://w3id.org/crahub/ANALYTME--5e0c3b2774
   name: IC-ESI-MS/MS
-  parent_method: icms
+  parent_method: https://w3id.org/crahub/ANALYTME--1acf511985
   unique_name: IC_ESI_MS_MS
-- id: ic_esi_hrms
+- id: https://w3id.org/crahub/ANALYTME--376a545b89
   name: IC-ESI-HRMS
-  parent_method: icms
+  parent_method: https://w3id.org/crahub/ANALYTME--1acf511985
   unique_name: IC_ESI_HRMS
-- id: ic_esi_hrms_ms
+- id: https://w3id.org/crahub/ANALYTME--f1a6b6e292
   name: IC-ESI-HRMS/MS
-  parent_method: icms
+  parent_method: https://w3id.org/crahub/ANALYTME--1acf511985
   unique_name: IC_ESI_HRMS_MS
-#- id: sfc_ms
- # name: SFC-MS
- # parent_method: sfc
- # unique_name: SFC_MS
-- id: sfc_ms_ms
+- id: https://w3id.org/crahub/ANALYTME--3fd2762515
   name: SFC-MS/MS
-  parent_method: sfc
+  parent_method: https://w3id.org/crahub/ANALYTME--fff64cb6be
   unique_name: SFC_MS_MS
-- id: sfc_hrms
+- id: https://w3id.org/crahub/ANALYTME--42980b958a
   name: SFC-HRMS
-  parent_method: sfc
+  parent_method: https://w3id.org/crahub/ANALYTME--fff64cb6be
   unique_name: SFC_HRMS
-- id: sfc_hrms_ms
+- id: https://w3id.org/crahub/ANALYTME--c21532bf8b
   name: SFC-HRMS/MS
-  parent_method: sfc
+  parent_method: https://w3id.org/crahub/ANALYTME--fff64cb6be
   unique_name: SFC_HRMS_MS
-- id: lc_dad
+- id: https://w3id.org/crahub/ANALYTME--20a0134961
   name: LC-DAD
-  parent_method: lc
+  parent_method: https://w3id.org/crahub/ANALYTME--196accbcf3
   unique_name: LC_DAD
-- id: lc_fld
+- id: https://w3id.org/crahub/ANALYTME--8ff72c1ace
   name: LC-FLD
-  parent_method: lc
+  parent_method: https://w3id.org/crahub/ANALYTME--196accbcf3
   unique_name: LC_FLD
-- id: lc_uv
+- id: https://w3id.org/crahub/ANALYTME--851305c4b4
   name: LC-UV
-  parent_method: lc
+  parent_method: https://w3id.org/crahub/ANALYTME--196accbcf3
   unique_name: LC_UV
-- id: hplc
+- id: https://w3id.org/crahub/ANALYTME--40a464ffb4
   name: HPLC
-  parent_method: lc
+  parent_method: https://w3id.org/crahub/ANALYTME--196accbcf3
   unique_name: HPLC
-- id: hplc_dad
+- id: https://w3id.org/crahub/ANALYTME--c5152f76d6
   name: HPLC-DAD
-  parent_method: lc
+  parent_method: https://w3id.org/crahub/ANALYTME--196accbcf3
   unique_name: HPLC_DAD
-- id: hplc_fld
+- id: https://w3id.org/crahub/ANALYTME--fd63e69f8c
   name: HPLC-FLD
-  parent_method: lc
+  parent_method: https://w3id.org/crahub/ANALYTME--196accbcf3
   unique_name: HPLC_FLD
-- id: hplc_uv
+- id: https://w3id.org/crahub/ANALYTME--da48e39620
   name: HPLC-UV
-  parent_method: lc
+  parent_method: https://w3id.org/crahub/ANALYTME--196accbcf3
   unique_name: HPLC_UV
-- id: uplc
+- id: https://w3id.org/crahub/ANALYTME--48906c0321
   name: UPLC
-  parent_method: lc
+  parent_method: https://w3id.org/crahub/ANALYTME--196accbcf3
   unique_name: UPLC
-- id: uplc_dad
+- id: https://w3id.org/crahub/ANALYTME--1eda8b92a2
   name: UPLC-DAD
-  parent_method: lc
+  parent_method: https://w3id.org/crahub/ANALYTME--196accbcf3
   unique_name: UPLC_DAD
-- id: uplc_fld
+- id: https://w3id.org/crahub/ANALYTME--a1e500454c
   name: UPLC-FLD
-  parent_method: lc
+  parent_method: https://w3id.org/crahub/ANALYTME--196accbcf3
   unique_name: UPLC_FLD
-- id: uplc_uv
+- id: https://w3id.org/crahub/ANALYTME--ec4ab51b00
   name: UPLC-UV
-  parent_method: lc
+  parent_method: https://w3id.org/crahub/ANALYTME--196accbcf3
   unique_name: UPLC_UV
-- id: gc_ecd
+- id: https://w3id.org/crahub/ANALYTME--2fd95d85df
   name: GC-ECD
-  parent_method: gc
+  parent_method: https://w3id.org/crahub/ANALYTME--a3973867cd
   unique_name: GC_ECD
-- id: gc_fid
+- id: https://w3id.org/crahub/ANALYTME--e4dd2a427e
   name: GC-FID
-  parent_method: gc
+  parent_method: https://w3id.org/crahub/ANALYTME--a3973867cd
   unique_name: GC_FID
-- id: gc_pid
+- id: https://w3id.org/crahub/ANALYTME--1287207218
   name: GC-PID
-  parent_method: gc
+  parent_method: https://w3id.org/crahub/ANALYTME--a3973867cd
   unique_name: GC_PID
-- id: ic_uv
+- id: https://w3id.org/crahub/ANALYTME--d988f0513c
   name: IC-UV
-  parent_method: ic
+  parent_method: https://w3id.org/crahub/ANALYTME--f05a225e14
   unique_name: IC_UV
-- id: ic_dad
+- id: https://w3id.org/crahub/ANALYTME--96a512d22c
   name: IC-DAD
-  parent_method: ic
+  parent_method: https://w3id.org/crahub/ANALYTME--f05a225e14
   unique_name: IC_DAD
-- id: ic_fld
+- id: https://w3id.org/crahub/ANALYTME--ad6d8de467
   name: IC-FLD
-  parent_method: ic
+  parent_method: https://w3id.org/crahub/ANALYTME--f05a225e14
   unique_name: IC_FLD
-- id: lc_icp_ms
+- id: https://w3id.org/crahub/ANALYTME--4a49c77377
   name: LC-ICP-MS
-  parent_method: mixedicp
+  parent_method: https://w3id.org/crahub/ANALYTME--82352d189b
   unique_name: LC_ICP_MS
-- id: lc_icp_ms_ms
+- id: https://w3id.org/crahub/ANALYTME--276d5893a7
   name: LC-ICP-MS/MS
-  parent_method: mixedicp
+  parent_method: https://w3id.org/crahub/ANALYTME--82352d189b
   unique_name: LC_ICP_MS_MS
-- id: gc_icp_ms
+- id: https://w3id.org/crahub/ANALYTME--1cea769193
   name: GC-ICP-MS
-  parent_method: mixedicp
+  parent_method: https://w3id.org/crahub/ANALYTME--82352d189b
   unique_name: GC_ICP_MS
-- id: ic_icp_ms
+- id: https://w3id.org/crahub/ANALYTME--8a872828c1
   name: IC-ICP-MS
-  parent_method: mixedicp
+  parent_method: https://w3id.org/crahub/ANALYTME--82352d189b
   unique_name: IC_ICP_MS
-- id: lc_ir
+- id: https://w3id.org/crahub/ANALYTME--2386e22b75
   name: LC-IR
-  parent_method: mixothers
+  parent_method: https://w3id.org/crahub/ANALYTME--1cae29aecd
   unique_name: LC_IR
-- id: lc_nmr
+- id: https://w3id.org/crahub/ANALYTME--bfa70aaa45
   name: LC-NMR
-  parent_method: mixothers
+  parent_method: https://w3id.org/crahub/ANALYTME--1cae29aecd
   unique_name: LC_NMR
