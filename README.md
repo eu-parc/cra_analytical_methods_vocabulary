@@ -1,31 +1,103 @@
-# Template repo
+## Matrix Vocabulary Dropbox to Nanopublication Template
 
-This repository can be used to start building your own vocabulary in a way that is compatible with the github actions as defined in `.github/workflows`.
-For instructions on [how to create a repo from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+This repository implements a staged vocabulary workflow for matrices:
 
-# .github
-This folder contains the `ISSUE TEMPLATES` to add, modify or deprecate a vocabulary term as well as the config files to configure actions (`.github/workflows`).
+## Proposing a new matrix
 
-# Data
-Add the vocabulary content as `.csv` and/or `.yaml` depending on the reusable workflows you want to use.
+1. All new matrix info can be added to one or more `*.yaml` files following this structure. This is a minimal example for such a `*.yaml`.
 
-# Rules
-The `voc2skosmos` workflow that transforms a `.csv` into a SKOS vocabulary requires a set of `yarrml` rules.
+```{json}
+matrix_subclasses:
+- id: environmentalmatrix
+  name: "environmental matrix"
+  description: All abiotic environmental compartments in which chemicals can be measured
+  parent_matrices: 
+    - https://w3id.org/peh/terms/Matrix
+- id: bioticmatrix
+  name: "biotic matrix"
+  description: All biological organisms and their tissues
+  parent_matrices: 
+    - https://w3id.org/peh/terms/Matrix
+```
+Note that the identifier field does not need to be provided, identifiers are minted on the fly.
 
-# Schema
-Contains the data schema for the vocabulary terms and the changelog schema. Note that the workflows implemented within the eu-parc repository also support the usage of a uri to point to a data schema.
+2. Open a PR with these *.yaml files added to the dropbox
 
-# Changelog
-The changelog should be used as an instrument to keep track of changes to the vocabulary in between releases. The changelog should be updated with each pull request.
-[NOTE: The changelog schema will be deprecated soon. We'll transform the workflows to simply use diffs of the released versions.]
+## Under the hood
 
-# Workflows
-* Add identifiers:
-* Publish Vocabulary: Two options (code for both hosted at [voc2skosmos-workflow](https://github.com/eu-parc/voc2skosmos-workflow))
-    * csv2skos: requires a `.csv` file in the data: 
-    * yml2skos: requires a `.yml` file made according to a LinkML schema: 
-* [voc2nanopub](https://github.com/eu-parc/voc2nanopub): Not configured in the template but departs from the same LinkML-based `.yml`
+1. New YAML vocab files are dropped into `dropbox/`.
+2. Processing converts them into RDF assertions in `unpublished/`.
+3. Processed source YAML files move to `archive/` with a ULID suffix to avoid overwriting earlier submissions.
+4. Publishing creates nanopublications from `unpublished/`.
+5. Publishing also writes a timestamped term-to-nanopub redirect mapping into `redirect/`.
+6. Successfully published assertion files move to `published/`.
 
-# Building vocabularies with LinkML
-* [LinkML documentation](https://linkml.io/linkml/)
-* Example: [matrix-vocabulary](https://github.com/eu-parc/matrix-vocabulary)
+## Folder Semantics
+
+- `dropbox/`: incoming YAML vocabulary files
+- `archive/`: processed YAML files moved out of dropbox with ULID-labeled filenames
+- `unpublished/`: generated RDF term assertions waiting for publish
+- `redirect/`: timestamped term identifier to nanopub identifier mappings produced during publishing
+- `published/`: assertions already published as nanopublications
+- `build/`: transient build artifacts
+
+## Local Usage
+
+Install dependencies:
+
+```bash
+uv sync
+```
+
+Download a tagged `peh.yaml` snapshot into `schema/`:
+
+```bash
+make fetch-peh-schema
+```
+
+Override the upstream tag when you want a different schema release:
+
+```bash
+make fetch-peh-schema PEH_SCHEMA_TAG=v0.6.0
+```
+
+Process incoming YAML from `dropbox/`:
+
+```bash
+make pipeline
+```
+
+Dry-run publish (no move to `published/`):
+
+```bash
+make publish-pipeline DRY=--dry-run
+```
+
+Real publish (requires nanopub credentials in environment):
+
+```bash
+export NANOPUB_PRIVATE_KEY=...
+export NANOPUB_PUBLIC_KEY=...
+export INTRO_NANOPUB_URI=...
+make publish-pipeline
+```
+
+Each publish run writes a uniquely named redirect mapping file such as
+`redirect/term-to-nanopub_20260424T120102Z.tsv`.
+
+End-to-end local smoke test:
+
+```bash
+make test-flow
+```
+
+## GitHub Workflows
+
+- `serialize.yaml`: on push to `main` with `dropbox/**` changes, runs `make pipeline` and commits `archive/` + `unpublished/` updates.
+- `test-serialize.yaml`: on PR with `dropbox/**` changes, validates processing behavior.
+- `publish.yaml`: publishes nanopublications on:
+  - release publish (real publish),
+  - tag push (dry-run),
+  - manual `workflow_dispatch` ("Publish mode" input: `dry-run` or `publish`).
+
+In manual real publish mode (`workflow_dispatch` with `publish`), published assertion files are moved from `unpublished/` to `published/`, the new redirect mapping file is committed from `redirect/`, and both changes are pushed.
