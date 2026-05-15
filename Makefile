@@ -3,50 +3,39 @@ UNPUBLISHED_FOLDER ?= unpublished
 PUBLISHED_FOLDER ?= published
 ARCHIVE_FOLDER ?= archive
 REDIRECT_FOLDER ?= redirect
-SCHEMA ?= schema/peh.yaml
-PEH_SCHEMA_REPO ?= eu-parc/parco-hbm
-PEH_SCHEMA_TAG ?= v0.6.0
-PEH_SCHEMA_SOURCE_PATH ?= linkml/schema/peh.yaml
-PEH_SCHEMA_DEST ?= schema/peh.yaml
-PEH_SCHEMA_URL ?= https://raw.githubusercontent.com/$(PEH_SCHEMA_REPO)/$(PEH_SCHEMA_TAG)/$(PEH_SCHEMA_SOURCE_PATH)
+
+SCHEMA ?= schema/analytical-methods-vocabulary.schema.yaml
+
 OUT_FOLDER ?= build
-ONTOLOGY_LABEL ?= matrices.ttl
-TARGET_CLASS ?= matrix_subclasses
-BASE_NAMESPACE ?= https://w3id.org/peh/terms/
-ENTITY_LIST_PREDICATE ?= https://w3id.org/peh/terms/hasMatrixSubclass
-MINT_NAMESPACE ?= https://w3id.org/peh/matrices/
+ONTOLOGY_LABEL ?= analytical-methods.ttl
+TARGET_CLASS ?= analytical_methods
+BASE_NAMESPACE ?= https://w3id.org/chemical-exposome/terms/
+TERM_PARENT_CLASS ?= https://w3id.org/chemical-exposome/terms/AnalyticalMethod
+MINT_NAMESPACE ?= https://w3id.org/chemical-exposome/terms/
+
 COMBINED_DATA ?= $(OUT_FOLDER)/combined.yaml
+
 DRY ?=
 
 DATA_FILES = $(sort $(wildcard $(DROPBOX_FOLDER)/*.yaml))
 
-.PHONY: help print-data prepare fetch-peh-schema aggregate mint build graph2assertions \
+.PHONY: help print-data prepare aggregate mint build graph2assertions \
 	validate-pipeline process-dropbox archive-dropbox publish-nanopubs mark-published \
 	publish-pipeline pipeline test-flow clean
 
 help:
 	@echo "Targets:"
-	@echo "  make fetch-peh-schema          # download schema/peh.yaml from a tagged parco-hbm release"
-	@echo "  make pipeline                  # process dropbox -> unpublished + archive"
-	@echo "  make validate-pipeline         # process dropbox -> build + unpublished, without archive/publish"
-	@echo "  make publish-pipeline          # publish unpublished assertions + move to published"
-	@echo "  make publish-pipeline DRY=--dry-run"
-	@echo "  make test-flow                 # local end-to-end dry-run test"
+	@echo " make pipeline          # process dropbox -> unpublished + archive"
+	@echo " make validate-pipeline # process dropbox -> build + unpublished, without archive/publish"
+	@echo " make publish-pipeline  # publish unpublished assertions + move to published"
+	@echo " make publish-pipeline DRY=--dry-run"
+	@echo " make test-flow         # local end-to-end dry-run test"
 
 print-data:
 	@echo "$(DATA_FILES)"
 
 prepare:
 	mkdir -p $(OUT_FOLDER) $(UNPUBLISHED_FOLDER) $(PUBLISHED_FOLDER) $(ARCHIVE_FOLDER) $(REDIRECT_FOLDER)
-
-fetch-peh-schema:
-	@if [ -z "$(PEH_SCHEMA_TAG)" ]; then \
-		echo "PEH_SCHEMA_TAG must be set to a released tag, for example v0.4.0."; \
-		exit 1; \
-	fi
-	mkdir -p $(dir $(PEH_SCHEMA_DEST))
-	curl -fsSL "$(PEH_SCHEMA_URL)" -o "$(PEH_SCHEMA_DEST)"
-	@echo "Downloaded $(PEH_SCHEMA_DEST) from $(PEH_SCHEMA_REPO) tag $(PEH_SCHEMA_TAG)"
 
 aggregate: prepare
 	@set -e; \
@@ -79,7 +68,7 @@ build: mint
 	else \
 		echo "Building $(ONTOLOGY_LABEL)"; \
 		uv run linkml-convert \
-			--target-class EntityList \
+			--target-class AnalyticalMethodList \
 			-s $(SCHEMA) \
 			-o $(OUT_FOLDER)/$(ONTOLOGY_LABEL) \
 			$(COMBINED_DATA); \
@@ -95,12 +84,12 @@ graph2assertions: build
 			--input-ontology-path $(OUT_FOLDER)/$(ONTOLOGY_LABEL) \
 			--base-namespace $(BASE_NAMESPACE) \
 			--term-output-path $(UNPUBLISHED_FOLDER) \
-			--subjects-from-predicate $(ENTITY_LIST_PREDICATE); \
+			--term-parent-class $(TERM_PARENT_CLASS); \
 	fi
 
 validate-pipeline: graph2assertions
 
-archive-dropbox: graph2assertions
+archive-dropbox: prepare
 	@set -e; \
 	if [ -n "$(DRY)" ]; then \
 		echo "DRY mode enabled. Keeping YAML files in $(DROPBOX_FOLDER)."; \
@@ -111,23 +100,23 @@ archive-dropbox: graph2assertions
 		echo "No YAML files found in $(DROPBOX_FOLDER). Nothing to archive."; \
 		exit 0; \
 	fi; \
-	if [ ! -f "$(COMBINED_DATA)" ]; then \
-		echo "No minted combined YAML available. Nothing to archive."; \
-		exit 1; \
-	fi; \
-	while :; do \
-		label=$$(python3 -c 'import os, time; alphabet = "0123456789ABCDEFGHJKMNPQRSTVWXYZ"; value = (int(time.time() * 1000) << 80) | int.from_bytes(os.urandom(10), "big"); print("".join(alphabet[(value >> shift) & 31] for shift in range(125, -1, -5)))'); \
-		dest="$(ARCHIVE_FOLDER)/combined_$${label}.yaml"; \
-		[ ! -e "$$dest" ] && break; \
-	done; \
-	cp "$(COMBINED_DATA)" "$$dest"; \
-	echo "Archived minted combined YAML -> $$dest"; \
 	for src in $$files; do \
-		rm "$$src"; \
-		echo "Removed processed dropbox file $$src"; \
+		name=$$(basename "$$src"); \
+		stem=$${name%.yaml}; \
+		while :; do \
+			label=$$(python3 -c 'import os, time; alphabet = "0123456789ABCDEFGHJKMNPQRSTVWXYZ"; value = (int(time.time() * 1000) << 80) | int.from_bytes(os.urandom(10), "big"); print("".join(alphabet[(value >> shift) & 31] for shift in range(125, -1, -5)))'); \
+			dest="$(ARCHIVE_FOLDER)/$${stem}_$${label}.yaml"; \
+			[ ! -e "$$dest" ] && break; \
+		done; \
+		if [ -e "$$dest" ]; then \
+			echo "Refusing to overwrite existing archive file $$dest"; \
+			exit 1; \
+		fi; \
+		mv "$$src" "$$dest"; \
+		echo "Archived $$src -> $$dest"; \
 	done
 
-process-dropbox: archive-dropbox
+process-dropbox: graph2assertions archive-dropbox
 
 publish-nanopubs: prepare
 	@set -e; \
@@ -170,6 +159,7 @@ mark-published: prepare
 	done
 
 publish-pipeline: publish-nanopubs mark-published
+
 pipeline: process-dropbox
 
 test-flow:
