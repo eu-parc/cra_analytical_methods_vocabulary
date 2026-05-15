@@ -1,14 +1,14 @@
 ---
 # see https://github.com/nextapps-de/flexsearch#tokenizer-prefix-search for options
 tokenizer: "full" # strict, forward, reverse, full
-custom_domain: "https://eu-parc.github.io/matrix-vocabulary/"
+custom_domain: "https://eu-parc.github.io/cra_analytical_methods_vocabulary/"
 fail_on_validation: false
 searchableAttributes:
   - "prefLabel" # you should not delete this one
   - "altLabel"
 
 ui:
-  title: "PEH Matrix Vocabulary" # Title is mandatory
+  title: "Analytical methods vocabulary" # Title is mandatory
   colors:
     skoHubWhite: "rgb(255, 255, 255)"
     skoHubDarkColor: "rgb(15, 85, 75)"
