@@ -1,27 +1,40 @@
-## Matrix Vocabulary Dropbox to Nanopublication Template
+# CRA Analytical Methods Vocabulary
 
-This repository implements a staged vocabulary workflow for matrices:
+A controlled vocabulary of analytical methods used in chemical risk assessment, developed within the [PARC project](https://www.eu-parc.eu/). Terms are published as nanopublications under the shared `https://w3id.org/chemical-exposome/terms/` namespace.
 
-## Proposing a new matrix
+This vocabulary is part of the [chemical-exposome](https://w3id.org/chemical-exposome/) semantic infrastructure and is referenced via `sosa:usedProcedure` in the [chemicals-outdoor metadata schema](https://w3id.org/chemical-exposome/schema/chemicals-outdoor) and the PEH data model.
 
-1. All new matrix info can be added to one or more `*.yaml` files following this structure. This is a minimal example for such a `*.yaml`.
+---
 
-```{json}
-matrix_subclasses:
-- id: environmentalmatrix
-  name: "environmental matrix"
-  description: All abiotic environmental compartments in which chemicals can be measured
-  parent_matrices: 
-    - https://w3id.org/peh/terms/Matrix
-- id: bioticmatrix
-  name: "biotic matrix"
-  description: All biological organisms and their tissues
-  parent_matrices: 
-    - https://w3id.org/peh/terms/Matrix
+## Proposing a new analytical method term
+
+1. Add one or more `*.yaml` files to the `dropbox/` folder following this structure. This is a minimal example:
+
+```yaml
+$schema: "https://w3id.org/chemical-exposome/schema/dropbox-analytical-method.schema.json"
+
+analytical_methods:
+  - id: FlameAAS
+    name: Flame Atomic Absorption Spectroscopy
+    abbreviation: Flame AAS
+    description: >-
+      Sample solution is nebulised into a flame for atomisation.
+      Suitable for major and minor element concentrations (ppm range).
+    parent_method: AtomicAbsorptionSpectroscopy
 ```
-Note that the identifier field does not need to be provided, identifiers are minted on the fly.
 
-2. Open a PR with these *.yaml files added to the dropbox
+Notes:
+- `id` is a local identifier — full URIs are minted automatically by the pipeline under `https://w3id.org/chemical-exposome/terms/`
+- `name` is the full preferred label (skos:prefLabel)
+- `abbreviation` is the standard acronym (skos:altLabel)
+- `parent_method` references the local `id` or full URI of the parent method
+- Set `top_concept: true` and omit `parent_method` for top-level concepts
+
+See `schema/dropbox-analytical-method.schema.json` for the full field reference.
+
+2. Open a PR with your `*.yaml` files added to `dropbox/`
+
+---
 
 ## Under the hood
 
@@ -32,33 +45,26 @@ Note that the identifier field does not need to be provided, identifiers are min
 5. Publishing also writes a timestamped term-to-nanopub redirect mapping into `redirect/`.
 6. Successfully published assertion files move to `published/`.
 
-## Folder Semantics
+---
+
+## Folder semantics
 
 - `dropbox/`: incoming YAML vocabulary files
 - `archive/`: processed YAML files moved out of dropbox with ULID-labeled filenames
 - `unpublished/`: generated RDF term assertions waiting for publish
-- `redirect/`: timestamped term identifier to nanopub identifier mappings produced during publishing
+- `redirect/`: timestamped term-to-nanopub identifier mappings produced during publishing
 - `published/`: assertions already published as nanopublications
 - `build/`: transient build artifacts
+- `schema/`: vocabulary schema files
 
-## Local Usage
+---
+
+## Local usage
 
 Install dependencies:
 
 ```bash
 uv sync
-```
-
-Download a tagged `peh.yaml` snapshot into `schema/`:
-
-```bash
-make fetch-peh-schema
-```
-
-Override the upstream tag when you want a different schema release:
-
-```bash
-make fetch-peh-schema PEH_SCHEMA_TAG=v0.6.0
 ```
 
 Process incoming YAML from `dropbox/`:
@@ -91,13 +97,42 @@ End-to-end local smoke test:
 make test-flow
 ```
 
+---
+
 ## GitHub Workflows
 
 - `serialize.yaml`: on push to `main` with `dropbox/**` changes, runs `make pipeline` and commits `archive/` + `unpublished/` updates.
-- `test-serialize.yaml`: on PR with `dropbox/**` changes, validates processing behavior.
+- `test-serialize.yaml`: on PR with `dropbox/**` changes, validates processing behaviour.
 - `publish.yaml`: publishes nanopublications on:
-  - release publish (real publish),
-  - tag push (dry-run),
-  - manual `workflow_dispatch` ("Publish mode" input: `dry-run` or `publish`).
+  - release publish (real publish)
+  - tag push (dry-run)
+  - manual `workflow_dispatch` ("Publish mode" input: `dry-run` or `publish`)
 
 In manual real publish mode (`workflow_dispatch` with `publish`), published assertion files are moved from `unpublished/` to `published/`, the new redirect mapping file is committed from `redirect/`, and both changes are pushed.
+
+---
+
+## Schema
+
+- `schema/analytical-methods-vocabulary.schema.yaml` — LinkML schema defining the vocabulary model and its alignment to SKOS, OWL, and SOSA
+- `schema/dropbox-analytical-method.schema.json` — JSON Schema for validating dropbox YAML submissions
+
+---
+
+## Namespace
+
+| Purpose | URI |
+|---------|-----|
+| Term URIs | `https://w3id.org/chemical-exposome/terms/` |
+| Schema | `https://w3id.org/chemical-exposome/schema/analytical-methods-vocabulary` |
+| Dropbox schema | `https://w3id.org/chemical-exposome/schema/dropbox-analytical-method.schema.json` |
+
+---
+
+## Related resources
+
+- [PARC project](https://www.eu-parc.eu/)
+- [Chemical-exposome namespace](https://w3id.org/chemical-exposome/)
+- [Chemicals-outdoor metadata schema](https://w3id.org/chemical-exposome/schema/chemicals-outdoor)
+- [PEH data model](https://w3id.org/peh/)
+- [Nanopublications](https://nanopub.net/)
